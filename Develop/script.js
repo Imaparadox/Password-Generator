@@ -1,23 +1,55 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var letterU= ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var letterU = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var letterL = ["abcdefghijklmnopqrstuvwxyz"];
 var number = [123456789];
-var specialCharacters =  !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+var specialCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var password = [letterU, letterL, number, specialCharacters];
 
 // Write password to the #password input
 function writePassword() {
-  var confirmUpperCase = confirm
   
+  var confirmLength = prompt("Pick a length between 8 & 128");
+  // console.log(confirmLength);
+  // return true/false 
+  var confirmUpperCase = confirm("Upper-case Letters?");
+  // console.log(confirmUpperCase);
+  // return true/false 
+  var confirmLowerCase = confirm("Lower-case Letters?");
+  // console.log(confirmLowerCase);
+  // return true/false 
+  var confirmNumber = confirm("Number?");
+  // console.log(confirmNumber);
+  // return true/false 
+  var confirmNumber = confirm("Special character?");
+  // console.log(confirmNumber);
+  // return string
+  // if (confirmLength )
+  var password = [letterU, letterL, number, specialCharacters];
+  return password;
 
-  passwordText.value = password;
+};
 
-}
+writePassword();
+
+function generatePassword(); {
+
+
+};
+
+generatePassword(); 
+
+
+
+// writePassword();
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// addEventListener();
+
+
 
 
 
@@ -27,3 +59,5 @@ generateBtn.addEventListener("click", writePassword);
 // for (i = 0; i < 5; i++) {
 //   text += "The number is " + i + "<br>";
 // }
+
+// passwordText.value = password;
