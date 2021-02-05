@@ -14,7 +14,7 @@ function writePassword() {
   // console.log(confirmLength);
   // return true/false 
   var confirmUpperCase = confirm("Upper-case Letters?");
-  // console.log(confirmUpperCase);
+  // console.log(confirmUpperCase); 
   // return true/false 
   var confirmLowerCase = confirm("Lower-case Letters?");
   // console.log(confirmLowerCase);
@@ -22,7 +22,7 @@ function writePassword() {
   var confirmNumber = confirm("Number?");
   // console.log(confirmNumber);
   // return true/false 
-  var confirmNumber = confirm("Special character?");
+  var confirmspecialCharacters = confirm("Special character?");
   // console.log(confirmNumber);
   // return string
   // if (confirmLength )
@@ -33,10 +33,18 @@ function writePassword() {
 
 writePassword();
 
-function generatePassword(); {
+function generatePassword() {
+var {
+  confirmUpperCase,
+  confirmLowerCase,
+  confirmNumber,
+  specialCharacters,
+};
 
 
 };
+
+// (Math.floor(Math.random() * confirm.length);
 
 generatePassword(); 
 
