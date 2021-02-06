@@ -99,5 +99,5 @@ generateBtn.addEventListener("click", writePassword);
 
 // passwordText.value = password;
 
-getPasswordOptions();
-writePassword();
+// getPasswordOptions();
+// writePassword();
