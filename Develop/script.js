@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numbers = ["1","2","3","4","5","6","7","8","9"];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var password = [upperCase, lowerCase, numbers, specialCharacters];
 
@@ -52,24 +52,16 @@ function getPasswordOptions() {
     lowercase: confirmLowerCase,
     numbers: confirmNumber,
     special: confirmspecialCharacters
-  };
+  }; return passwordOptions;
   console.log(passwordOptions);
-
-  return passwordOptions;
-
-
 };
+
 function getRandomElement(array) {
-var index = Math.floor(Math.random() * array.length);
-var element = array[index];
-return element;
+  var index = Math.floor(Math.random() * array.length);
+  var element = array[index];
+  return element;
 
 };
-
-
-// getPasswordOptions();
-// writePassword();
-
 
 
 function generatePassword() {
@@ -77,11 +69,15 @@ function generatePassword() {
   var newPasswordArray = [];
   var possibleCharacters = [];
   var characters = [];
-if (pwdOptions.upperCase) {
 
+  if (pwdOptions.upperCase) {
 
-};
-console.log(pwdOptions )
+  
+   pwdOptions.push("");
+
+  };
+  console.log(pwdOptions)
+
 };
 //if statements
 //concat function
@@ -101,17 +97,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-
-
-
-
-// var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-//   var passwordLength = prompt("Choose a password length between: 8 & 128")
-// for (i = 0; i < 5; i++) {
-//   text += "The number is " + i + "<br>";
-// }
-
 // passwordText.value = password;
 
+getPasswordOptions();
+writePassword();
